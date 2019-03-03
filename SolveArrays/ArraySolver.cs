@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace SolveArrays
 {
@@ -7,26 +8,43 @@ namespace SolveArrays
     {
         public int Sum(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            return numbers.Sum();
         }
 
         public int SumEvens(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            foreach (int element in numbers)
+            {
+                if (element % 2 == 0)
+                {
+                    return numbers.Sum();
+                }
+            }
+            return 0;
         }
 
         public double AverageEvens(int[] numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            foreach (int element in numbers)
+            {
+                if (element % 2 == 0)
+                {
+                    return numbers.Average();
+                }
+            }
+            return 0;
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            // TODO: Implement this method
-            throw new NotImplementedException();
+            if (numbers.Sum() % 2 != 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }
